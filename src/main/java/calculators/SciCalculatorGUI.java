@@ -1,4 +1,4 @@
-package main.java.calculators;
+package calculators;
 
 import java.awt.GridBagLayout;
 
@@ -71,7 +71,7 @@ public class SciCalculatorGUI extends CalculatorGUI {
 		gbl_jp.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
 		jp.setLayout(gbl_jp);
 		
-		String xraised = new String("x");
+		
 		
 		ButtonGroup bg = new ButtonGroup();
 		

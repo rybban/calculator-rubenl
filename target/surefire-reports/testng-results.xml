@@ -2,32 +2,32 @@
 <testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="482" started-at="2018-12-13T01:52:44Z" finished-at="2018-12-13T01:52:45Z">
+  <suite name="Surefire suite" duration-ms="430" started-at="2018-12-13T15:54:21Z" finished-at="2018-12-13T15:54:22Z">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="482" started-at="2018-12-13T01:52:44Z" finished-at="2018-12-13T01:52:45Z">
-      <class name="test.java.CalculatorTest">
-        <test-method status="PASS" signature="testAdd()[pri:0, instance:testAdd(test.java.CalculatorTest)]" name="testAdd" duration-ms="5" started-at="2018-12-13T02:52:45Z" finished-at="2018-12-13T02:52:45Z">
+    <test name="Surefire test" duration-ms="430" started-at="2018-12-13T15:54:21Z" finished-at="2018-12-13T15:54:22Z">
+      <class name="main.CalculatorTest">
+        <test-method status="PASS" signature="testAdd()[pri:0, instance:testAdd(main.CalculatorTest)]" name="testAdd" duration-ms="9" started-at="2018-12-13T16:54:22Z" finished-at="2018-12-13T16:54:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAdd -->
-        <test-method status="PASS" signature="testSubtract()[pri:0, instance:testSubtract(test.java.CalculatorTest)]" name="testSubtract" duration-ms="1" started-at="2018-12-13T02:52:45Z" finished-at="2018-12-13T02:52:45Z">
+        <test-method status="PASS" signature="testSubtract()[pri:0, instance:testSubtract(main.CalculatorTest)]" name="testSubtract" duration-ms="1" started-at="2018-12-13T16:54:22Z" finished-at="2018-12-13T16:54:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSubtract -->
-        <test-method status="PASS" signature="testSqrt()[pri:0, instance:testSqrt(test.java.CalculatorTest)]" name="testSqrt" duration-ms="0" started-at="2018-12-13T02:52:45Z" finished-at="2018-12-13T02:52:45Z">
+        <test-method status="PASS" signature="testSqrt()[pri:0, instance:testSqrt(main.CalculatorTest)]" name="testSqrt" duration-ms="0" started-at="2018-12-13T16:54:22Z" finished-at="2018-12-13T16:54:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSqrt -->
-        <test-method status="PASS" signature="testDivide()[pri:0, instance:testDivide(test.java.CalculatorTest)]" name="testDivide" duration-ms="4" started-at="2018-12-13T02:52:45Z" finished-at="2018-12-13T02:52:45Z">
+        <test-method status="PASS" signature="testDivide()[pri:0, instance:testDivide(main.CalculatorTest)]" name="testDivide" duration-ms="0" started-at="2018-12-13T16:54:22Z" finished-at="2018-12-13T16:54:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDivide -->
-        <test-method status="PASS" signature="testMultiply()[pri:0, instance:testMultiply(test.java.CalculatorTest)]" name="testMultiply" duration-ms="0" started-at="2018-12-13T02:52:45Z" finished-at="2018-12-13T02:52:45Z">
+        <test-method status="PASS" signature="testMultiply()[pri:0, instance:testMultiply(main.CalculatorTest)]" name="testMultiply" duration-ms="0" started-at="2018-12-13T16:54:22Z" finished-at="2018-12-13T16:54:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMultiply -->
-      </class> <!-- test.java.CalculatorTest -->
+      </class> <!-- main.CalculatorTest -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="sv"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SciCalculator.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">calculator-rubenl</a> &gt; <a href="index.source.html" class="el_package">calculators</a> &gt; <span class="el_source">SciCalculator.java</span></div><h1>SciCalculator.java</h1><pre class="source lang-java linenums">package calculators;
+
+import java.awt.event.ActionEvent;
+
+import javax.swing.AbstractButton;
+
+import interfaces.CalculatorAdvancedOperations;
+
+public class SciCalculator extends Calculator implements CalculatorAdvancedOperations {
+
+	SciCalculatorGUI sc;
+<span class="fc" id="L12">	public SciCalculator() {</span>
+<span class="fc" id="L13">		sc = (SciCalculatorGUI) super.g;</span>
+		
+<span class="fc" id="L15">		sc.cosb.addActionListener(this);</span>
+<span class="fc" id="L16">		sc.coshb.addActionListener(this);</span>
+<span class="fc" id="L17">		sc.tanb.addActionListener(this);</span>
+<span class="fc" id="L18">		sc.tanhb.addActionListener(this);</span>
+<span class="fc" id="L19">		sc.sinb.addActionListener(this);</span>
+<span class="fc" id="L20">		sc.sinhb.addActionListener(this);</span>
+<span class="fc" id="L21">		sc.x2b.addActionListener(this);</span>
+<span class="fc" id="L22">		sc.x3b.addActionListener(this);</span>
+		
+		
+<span class="fc" id="L25">	}</span>
+	
+	public void actionPerformed(ActionEvent e) {
+<span class="nc bnc" id="L28" title="All 2 branches missed.">		if ((e.getSource() == sc.cosb ||</span>
+<span class="nc bnc" id="L29" title="All 2 branches missed.">				e.getSource() == sc.coshb ||</span>
+<span class="nc bnc" id="L30" title="All 2 branches missed.">				e.getSource() == sc.sinb ||</span>
+<span class="nc bnc" id="L31" title="All 2 branches missed.">				e.getSource() == sc.sinhb ||</span>
+<span class="nc bnc" id="L32" title="All 2 branches missed.">				e.getSource() == sc.tanb ||</span>
+<span class="nc bnc" id="L33" title="All 2 branches missed.">				e.getSource() == sc.tanhb ||</span>
+<span class="nc bnc" id="L34" title="All 4 branches missed.">				e.getSource() == sc.cosb ) &amp;&amp; !recentOperator) {</span>
+<span class="nc" id="L35">			currentString = ((AbstractButton) e.getSource()).getText();</span>
+<span class="nc" id="L36">			totalString += currentString;</span>
+<span class="nc" id="L37">			super.g.textf.setText(totalString);</span>
+<span class="nc" id="L38">			System.out.println(recentOperator);</span>
+<span class="nc" id="L39">			recentOperator = true;</span>
+		}
+		
+		/*if (e.getSource() == sc.cosb &amp;&amp; !this.recentOperator) {
+			currentString = ((AbstractButton) e.getSource()).getText();
+			totalString += currentString;
+		}*/
+		
+<span class="nc" id="L47">		super.actionPerformed(e);</span>
+<span class="nc" id="L48">	}</span>
+
+	@Override
+	public double cos(double num) {
+<span class="nc" id="L52">		double result = Math.cos(num);</span>
+<span class="nc" id="L53">		return result;</span>
+	}
+
+	@Override
+	public double cosh(double num) {
+<span class="nc" id="L58">		double result = Math.cosh(num);</span>
+<span class="nc" id="L59">		return result;</span>
+	}
+
+	@Override
+	public double tan(double num) {
+<span class="nc" id="L64">		double result = Math.tan(num);</span>
+<span class="nc" id="L65">		return result;</span>
+	}
+
+	@Override
+	public double tanh(double num) {
+<span class="nc" id="L70">		double result = Math.tanh(num);</span>
+<span class="nc" id="L71">		return result;</span>
+	}
+
+	@Override
+	public double sin(double num) {
+<span class="nc" id="L76">		double result = Math.sin(num);</span>
+<span class="nc" id="L77">		return result;</span>
+	}
+
+	@Override
+	public double sinh(double num) {
+<span class="nc" id="L82">		double result = Math.sinh(num);</span>
+<span class="nc" id="L83">		return result;</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

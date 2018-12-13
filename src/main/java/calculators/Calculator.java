@@ -1,11 +1,11 @@
-package  main.java.calculators;
+package calculators;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import javax.swing.AbstractButton;
-import main.java.interfaces.CalculatorBasicOperations;
+import interfaces.CalculatorBasicOperations;
 
 public class Calculator implements ActionListener, CalculatorBasicOperations {
 	
@@ -14,12 +14,14 @@ public class Calculator implements ActionListener, CalculatorBasicOperations {
 	int currentEntryNumber = 0;
 	String currentString = "";
 	String totalString = "";
-	ArrayList<String> entries = new ArrayList();
+	ArrayList<String> entries = new ArrayList<String>();
 	boolean recentOperator = false;
 	boolean recentEquals = false;
 	
 	
 	double total;
+	double count = 0;
+	double totall = 0;
 	CalculatorGUI g;
 	public Calculator() {
 		
@@ -129,6 +131,8 @@ public class Calculator implements ActionListener, CalculatorBasicOperations {
 			previousEntrySize = 0;
 			currentString = "";
 			totalString = "";
+			totall = 0;
+			count = 0;
 		}
 		
 		else if(e.getSource() == g.squarerootb && !g.textf.getText().endsWith("1") && 
@@ -187,8 +191,12 @@ public class Calculator implements ActionListener, CalculatorBasicOperations {
 			recentEquals = false;
 		}
 		
-		if (e.getSource() == g.equalsb && recentOperator == false && entries.size() >= 2 && previousEntrySize != 0) {
-			equals(g.textf.getText());
+		if (e.getSource() == g.equalsb && recentOperator == false && entries.size() >= 2 && previousEntrySize != 0 && endsWithDigit(g.textf.getText())) {
+			if (this instanceof SciCalculator) {
+				this.equals(g.textf.getText());
+			}
+			else
+				equals(g.textf.getText());
 		}
 		
 		
@@ -233,9 +241,9 @@ public class Calculator implements ActionListener, CalculatorBasicOperations {
 	
 	@Override
 	public double equals(String total) {
-		double count = 0;
-		double totall = 0;
 		fullStringSize = g.textf.getText().length();
+		
+		
 
 		System.out.println(entries.toString());
 		
@@ -303,9 +311,15 @@ public class Calculator implements ActionListener, CalculatorBasicOperations {
 		previousEntrySize = entries.get(0).length();
 		
 		totalString = "" + totall;
+		
+		if (totalString.equals("Infinity"))
+			totalString = "Division by zero or something. Please reset";
+		
 		g.textf.setText(totalString);
 		recentEquals = true;
 		currentEntryNumber = 0;
+		count = 0;
+		totall = 0;
 		return 0;
 	}
 	
@@ -333,6 +347,15 @@ public class Calculator implements ActionListener, CalculatorBasicOperations {
 	public double squareroot(double number1) {
 		return Math.sqrt(number1);
 	}
+	
+	public boolean endsWithDigit(String total) {
+		if (total.endsWith("1") || total.endsWith("2") ||total.endsWith("3") ||total.endsWith("4") ||total.endsWith("5") ||total.endsWith("6") ||
+				total.endsWith("7") ||total.endsWith("8") ||total.endsWith("9") ||total.endsWith("0"))
+			return true;
+		else
+			return false;
+	}
+	
 
 	
 }

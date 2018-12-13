@@ -1,7 +1,7 @@
-main\java\calculators\Calculator.class
-main\java\interfaces\CalculatorAdvancedOperations.class
-main\java\interfaces\CalculatorBasicOperations.class
-main\java\calculators\CalculatorGUI.class
-main\java\calculators\SciCalculatorGUI.class
-main\java\Main.class
-main\java\calculators\SciCalculator.class
+calculators\SciCalculator.class
+calculators\Calculator.class
+calculators\CalculatorGUI.class
+calculators\SciCalculatorGUI.class
+interfaces\CalculatorAdvancedOperations.class
+interfaces\CalculatorBasicOperations.class
+main\Main.class

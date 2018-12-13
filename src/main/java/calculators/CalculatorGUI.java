@@ -1,4 +1,4 @@
-package main.java.calculators;
+package calculators;
 
 import java.awt.BorderLayout;
 import java.awt.Font;
@@ -45,7 +45,7 @@ public class CalculatorGUI {
 	JButton plusb;
 	JButton equalsb;
 	JPanel jcp;
-	private JButton button;
+	
 	
 	
 	public CalculatorGUI() {

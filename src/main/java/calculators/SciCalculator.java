@@ -1,10 +1,10 @@
-package main.java.calculators;
+package calculators;
 
 import java.awt.event.ActionEvent;
 
 import javax.swing.AbstractButton;
 
-import main.java.interfaces.CalculatorAdvancedOperations;
+import interfaces.CalculatorAdvancedOperations;
 
 public class SciCalculator extends Calculator implements CalculatorAdvancedOperations {
 
@@ -31,20 +31,75 @@ public class SciCalculator extends Calculator implements CalculatorAdvancedOpera
 				e.getSource() == sc.sinhb ||
 				e.getSource() == sc.tanb ||
 				e.getSource() == sc.tanhb ||
-				e.getSource() == sc.cosb ) && !recentOperator) {
+				e.getSource() == sc.cosb ) && !super.endsWithDigit(g.textf.getText())) {
 			currentString = ((AbstractButton) e.getSource()).getText();
 			totalString += currentString;
+			entries.add(currentString);
+			currentString = "";
 			super.g.textf.setText(totalString);
-			System.out.println(recentOperator);
 			recentOperator = true;
 		}
 		
-		/*if (e.getSource() == sc.cosb && !this.recentOperator) {
-			currentString = ((AbstractButton) e.getSource()).getText();
-			totalString += currentString;
-		}*/
-		
 		super.actionPerformed(e);
+	}
+	
+	public double equals(String total) {
+		
+		System.out.println(entries.toString());
+		
+		for (int i = 0; i < entries.size(); i++) {
+			if (entries.get(i).equals("cos")){
+				count = cos(Double.parseDouble(entries.get(i+1)));
+				entries.set(i, "" + count);
+				entries.remove(i+1);
+				
+				totall = count;
+			}
+			
+			if (entries.get(i).equals("tan")){
+				count = tan(Double.parseDouble(entries.get(i+1)));
+				entries.set(i, "" + count);
+				entries.remove(i+1);
+				
+				totall = count;
+			}
+			
+			if (entries.get(i).equals("sin")){
+				count = sin(Double.parseDouble(entries.get(i+1)));
+				entries.set(i, "" + count);
+				entries.remove(i+1);
+				
+				totall = count;
+			}
+			
+			if (entries.get(i).equals("cosh")){
+				count = cosh(Double.parseDouble(entries.get(i+1)));
+				entries.set(i, "" + count);
+				entries.remove(i+1);
+				
+				totall = count;
+			}
+			
+			if (entries.get(i).equals("tanh")){
+				count = tanh(Double.parseDouble(entries.get(i+1)));
+				entries.set(i, "" + count);
+				entries.remove(i+1);
+				
+				totall = count;
+			}
+			
+			if (entries.get(i).equals("sinh")){
+				count = sinh(Double.parseDouble(entries.get(i+1)));
+				entries.set(i, "" + count);
+				entries.remove(i+1);
+				
+				totall = count;
+			}
+			
+			System.out.println(entries.toString()  + totall);
+		}
+		super.equals(total);
+		return 0.0;
 	}
 
 	@Override
