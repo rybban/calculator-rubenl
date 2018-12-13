@@ -131,7 +131,18 @@ public class Calculator implements ActionListener, CalculatorBasicOperations {
 			totalString = "";
 		}
 		
-		else if(!recentOperator && e.getSource() == g.squarerootb) {
+		else if(e.getSource() == g.squarerootb && !g.textf.getText().endsWith("1") && 
+				!g.textf.getText().endsWith("2") && 
+				!g.textf.getText().endsWith("3") && 
+				!g.textf.getText().endsWith("4") && 
+				!g.textf.getText().endsWith("5") && 
+				!g.textf.getText().endsWith("6") && 
+				!g.textf.getText().endsWith("7") &&
+				!g.textf.getText().endsWith("8") &&
+				!g.textf.getText().endsWith("9") &&
+				!g.textf.getText().endsWith("0") &&
+				!g.textf.getText().endsWith(".") &&
+				!g.textf.getText().endsWith("\u221A")) {
 			currentString = ((AbstractButton) e.getSource()).getText();
 			totalString += currentString;
 			currentString = "sqrt";
@@ -200,6 +211,7 @@ public class Calculator implements ActionListener, CalculatorBasicOperations {
 	
 	}
 	
+	/*
 	public void addStringFromTextField(String s) {
 		String workingString = "";
 		char[] ca = s.toCharArray();
@@ -216,6 +228,7 @@ public class Calculator implements ActionListener, CalculatorBasicOperations {
 		}
 		//entries.add(workingString);
 	}
+	*/
 	
 	
 	@Override

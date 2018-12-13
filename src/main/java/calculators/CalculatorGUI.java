@@ -340,6 +340,14 @@ public class CalculatorGUI {
 		gbc_equalsb.gridy = 7;
 		jf.getContentPane().add(equalsb, gbc_equalsb);
 		
+		plusminusb.setEnabled(false);
+		memoryrecallb.setEnabled(false);
+		memoryclearb.setEnabled(false);
+		memorystoreb.setEnabled(false);
+		memoryaddb.setEnabled(false);
+		memorysubb.setEnabled(false);
+		clearentryb.setEnabled(false);
+		oneDivByXb.setEnabled(false);
 		
 		jf.setVisible(true);
 	}

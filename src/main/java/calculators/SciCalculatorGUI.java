@@ -318,6 +318,27 @@ public class SciCalculatorGUI extends CalculatorGUI {
 		gbc_tentopownb.gridy = 5;
 		jp.add(tentopownb, gbc_tentopownb);
 		
+		invb.setEnabled(false);
+		lnb.setEnabled(false);
+		leftparb.setEnabled(false);
+		rightparb.setEnabled(false);
+		intb.setEnabled(false);
+		pib.setEnabled(false);
+		nib.setEnabled(false);
+		dmsb.setEnabled(false);
+		xtopowyb.setEnabled(false);
+		yrootxb.setEnabled(false);
+		x3b.setEnabled(false);
+		thirdrootxb.setEnabled(false);
+		feb.setEnabled(false);
+		expb.setEnabled(false);
+		modb.setEnabled(false);
+		logb.setEnabled(false);
+		tentopownb.setEnabled(false);
+		radioButton.setEnabled(false);
+		radioButton_1.setEnabled(false);
+		radioButton_2.setEnabled(false);
+		
 		super.jf.getContentPane().setVisible(false);
 		super.jf.getContentPane().setVisible(true);
 	}
