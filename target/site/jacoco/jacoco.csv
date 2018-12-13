@@ -1,0 +1,6 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+calculator-rubenl,main.java,Main,8,0,0,0,3,0,2,0,2,0
+calculator-rubenl,main.java.calculators,SciCalculatorGUI,1,1326,0,0,1,232,1,1,1,1
+calculator-rubenl,main.java.calculators,Calculator,1158,157,133,1,158,37,70,6,3,6
+calculator-rubenl,main.java.calculators,CalculatorGUI,0,1480,0,0,0,252,0,1,0,1
+calculator-rubenl,main.java.calculators,SciCalculator,110,48,16,0,26,11,15,1,7,1
