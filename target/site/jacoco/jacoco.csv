@@ -1,6 +1,6 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-calculator-rubenl,calculators,Calculator,1244,163,149,1,168,39,78,6,3,6
+calculator-rubenl,calculators,Calculator,1153,163,149,1,161,39,78,6,3,6
 calculator-rubenl,calculators,SciCalculatorGUI,1,1405,0,0,1,252,1,1,1,1
-calculator-rubenl,calculators,SciCalculator,392,78,30,0,50,23,17,7,2,7
+calculator-rubenl,calculators,SciCalculator,372,78,30,0,48,23,17,7,2,7
 calculator-rubenl,calculators,CalculatorGUI,0,1520,0,0,0,262,0,1,0,1
 calculator-rubenl,main,Main,8,0,0,0,3,0,2,0,2,0
