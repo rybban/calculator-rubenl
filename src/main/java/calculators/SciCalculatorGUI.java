@@ -13,6 +13,12 @@ import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import javax.swing.JRadioButton;
 
+/**
+ * The GUI for the SciCalculator class.
+ * @author Ruben
+ *
+ */
+
 public class SciCalculatorGUI extends CalculatorGUI {
 	JPanel jp;
 	JFrame scijf;
@@ -44,9 +50,6 @@ public class SciCalculatorGUI extends CalculatorGUI {
 	 JButton logb;
 	 JButton tentopownb;
 	
-	/**
-	 * @wbp.parser.entryPoint
-	 */
 	public SciCalculatorGUI() {
 		
 		super.jf.setSize(425, 391);
@@ -338,6 +341,7 @@ public class SciCalculatorGUI extends CalculatorGUI {
 		radioButton.setEnabled(false);
 		radioButton_1.setEnabled(false);
 		radioButton_2.setEnabled(false);
+		x2b.setEnabled(false);
 		
 		super.jf.getContentPane().setVisible(false);
 		super.jf.getContentPane().setVisible(true);

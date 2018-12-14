@@ -7,6 +7,14 @@ import java.util.ArrayList;
 import javax.swing.AbstractButton;
 import interfaces.CalculatorBasicOperations;
 
+/**
+ * A calculator with the four basic operations and square root operation implemented. It has a simple GUI.
+ * Allows for more than one operation at a time.
+ * 
+ * @author Ruben
+ *
+ */
+
 public class Calculator implements ActionListener, CalculatorBasicOperations {
 	
 	int fullStringSize = 0;
@@ -23,6 +31,10 @@ public class Calculator implements ActionListener, CalculatorBasicOperations {
 	double count = 0;
 	double totall = 0;
 	CalculatorGUI g;
+	
+	/**
+	 * Creates a Calculator object
+	 */
 	public Calculator() {
 		
 		if (this instanceof SciCalculator)
@@ -53,7 +65,11 @@ public class Calculator implements ActionListener, CalculatorBasicOperations {
 		g.squarerootb.addActionListener(this);
 	}
 	
-	@Override
+	
+	/**
+	 * The implementation of what happens when buttons are pressed
+	 */
+	@Override 
 	public void actionPerformed(ActionEvent e) {
 
 		if ((e.getSource() == g.oneb ||
@@ -114,16 +130,7 @@ public class Calculator implements ActionListener, CalculatorBasicOperations {
 				currentString = "";
 				currentEntryNumber--;
 			}
-			
-			
 			g.textf.setText(totalString);
-			
-			/*try {
-				g.textf.setText(g.textf.getText(0, g.textf.getText().length()-1));
-			} catch (BadLocationException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}*/
 		}
 		else if (e.getSource() == g.clearb){
 			entries.removeAll(entries);
@@ -173,9 +180,6 @@ public class Calculator implements ActionListener, CalculatorBasicOperations {
 				currentString = "";
 				this.previousEntrySize = 0;
 			}
-			
-			
-			
 			fullStringSize = g.textf.getText().length();
 			
 			this.recentOperator = true;
@@ -219,28 +223,18 @@ public class Calculator implements ActionListener, CalculatorBasicOperations {
 	
 	}
 	
-	/*
-	public void addStringFromTextField(String s) {
-		String workingString = "";
-		char[] ca = s.toCharArray();
-		for (char c : ca) {
-			if (c == '1' || c == '2' || c == '3' || c == '4' || c == '5' || c == '6' || c == '7' || c == '8' || c == '9' || c == '0' || c == '.') {
-				workingString += c;
-			}
-			else if (c == '+' || c == '-' || c == '/' || c == '*' ) {
-				entries.add(workingString);
-				workingString = ""+c;
-				entries.add(workingString);
-				workingString = "";
-			}	
-		}
-		//entries.add(workingString);
-	}
-	*/
-	
-	
-	@Override
-	public double equals(String total) {
+	/**
+	 * 
+	 * 
+	 * Takes a String with numbers and operations to be calculated. 
+	 * The result of the calculations is shown in the text field of the GUI.
+	 * 
+	 * Must be used in the Calculator class.
+	 * 
+	 * @param total The String containing numbers and operations
+	 * 
+	 */
+	public void equals(String total) {
 		fullStringSize = g.textf.getText().length();
 		
 		
@@ -320,7 +314,6 @@ public class Calculator implements ActionListener, CalculatorBasicOperations {
 		currentEntryNumber = 0;
 		count = 0;
 		totall = 0;
-		return 0;
 	}
 	
 	@Override
@@ -348,6 +341,11 @@ public class Calculator implements ActionListener, CalculatorBasicOperations {
 		return Math.sqrt(number1);
 	}
 	
+	/**
+	 * Checks if a String ends with a digit.
+	 * @param total The String
+	 * @return true if there is a digit at the end of the parameter total
+	 */
 	public boolean endsWithDigit(String total) {
 		if (total.endsWith("1") || total.endsWith("2") ||total.endsWith("3") ||total.endsWith("4") ||total.endsWith("5") ||total.endsWith("6") ||
 				total.endsWith("7") ||total.endsWith("8") ||total.endsWith("9") ||total.endsWith("0"))

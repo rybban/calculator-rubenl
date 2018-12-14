@@ -1,32 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" total="33" passed="33">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="430" started-at="2018-12-13T15:54:21Z" finished-at="2018-12-13T15:54:22Z">
+  <suite name="Surefire suite" duration-ms="1023" started-at="2018-12-14T12:48:21Z" finished-at="2018-12-14T12:48:22Z">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="430" started-at="2018-12-13T15:54:21Z" finished-at="2018-12-13T15:54:22Z">
+    <test name="Surefire test" duration-ms="1023" started-at="2018-12-14T12:48:21Z" finished-at="2018-12-14T12:48:22Z">
       <class name="main.CalculatorTest">
-        <test-method status="PASS" signature="testAdd()[pri:0, instance:testAdd(main.CalculatorTest)]" name="testAdd" duration-ms="9" started-at="2018-12-13T16:54:22Z" finished-at="2018-12-13T16:54:22Z">
+        <test-method status="PASS" signature="testDivideNegative()[pri:0, instance:testDivideNegative(main.CalculatorTest)]" name="testDivideNegative" duration-ms="5" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testAdd -->
-        <test-method status="PASS" signature="testSubtract()[pri:0, instance:testSubtract(main.CalculatorTest)]" name="testSubtract" duration-ms="1" started-at="2018-12-13T16:54:22Z" finished-at="2018-12-13T16:54:22Z">
+        </test-method> <!-- testDivideNegative -->
+        <test-method status="PASS" signature="testTanhPositive()[pri:0, instance:testTanhPositive(main.CalculatorTest)]" name="testTanhPositive" duration-ms="1" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSubtract -->
-        <test-method status="PASS" signature="testSqrt()[pri:0, instance:testSqrt(main.CalculatorTest)]" name="testSqrt" duration-ms="0" started-at="2018-12-13T16:54:22Z" finished-at="2018-12-13T16:54:22Z">
+        </test-method> <!-- testTanhPositive -->
+        <test-method status="PASS" signature="testTanZero()[pri:0, instance:testTanZero(main.CalculatorTest)]" name="testTanZero" duration-ms="0" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSqrt -->
-        <test-method status="PASS" signature="testDivide()[pri:0, instance:testDivide(main.CalculatorTest)]" name="testDivide" duration-ms="0" started-at="2018-12-13T16:54:22Z" finished-at="2018-12-13T16:54:22Z">
+        </test-method> <!-- testTanZero -->
+        <test-method status="PASS" signature="testTanhNegative()[pri:0, instance:testTanhNegative(main.CalculatorTest)]" name="testTanhNegative" duration-ms="1" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testDivide -->
-        <test-method status="PASS" signature="testMultiply()[pri:0, instance:testMultiply(main.CalculatorTest)]" name="testMultiply" duration-ms="0" started-at="2018-12-13T16:54:22Z" finished-at="2018-12-13T16:54:22Z">
+        </test-method> <!-- testTanhNegative -->
+        <test-method status="PASS" signature="testSqrtPositive()[pri:0, instance:testSqrtPositive(main.CalculatorTest)]" name="testSqrtPositive" duration-ms="0" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMultiply -->
+        </test-method> <!-- testSqrtPositive -->
+        <test-method status="PASS" signature="testSqrtNegative()[pri:0, instance:testSqrtNegative(main.CalculatorTest)]" name="testSqrtNegative" duration-ms="0" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSqrtNegative -->
+        <test-method status="PASS" signature="testAddZero()[pri:0, instance:testAddZero(main.CalculatorTest)]" name="testAddZero" duration-ms="0" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddZero -->
+        <test-method status="PASS" signature="testTanPositive()[pri:0, instance:testTanPositive(main.CalculatorTest)]" name="testTanPositive" duration-ms="0" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTanPositive -->
+        <test-method status="PASS" signature="testAddPositive()[pri:0, instance:testAddPositive(main.CalculatorTest)]" name="testAddPositive" duration-ms="1" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddPositive -->
+        <test-method status="PASS" signature="testTanNegative()[pri:0, instance:testTanNegative(main.CalculatorTest)]" name="testTanNegative" duration-ms="0" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTanNegative -->
+        <test-method status="PASS" signature="testSinPositive()[pri:0, instance:testSinPositive(main.CalculatorTest)]" name="testSinPositive" duration-ms="6" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSinPositive -->
+        <test-method status="PASS" signature="testAddNegative()[pri:0, instance:testAddNegative(main.CalculatorTest)]" name="testAddNegative" duration-ms="1" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddNegative -->
+        <test-method status="PASS" signature="testMultiplyPositive()[pri:0, instance:testMultiplyPositive(main.CalculatorTest)]" name="testMultiplyPositive" duration-ms="0" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMultiplyPositive -->
+        <test-method status="PASS" signature="testSinNegative()[pri:0, instance:testSinNegative(main.CalculatorTest)]" name="testSinNegative" duration-ms="1" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSinNegative -->
+        <test-method status="PASS" signature="testMultiplyNegative()[pri:0, instance:testMultiplyNegative(main.CalculatorTest)]" name="testMultiplyNegative" duration-ms="1" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMultiplyNegative -->
+        <test-method status="PASS" signature="testCoshPositive()[pri:0, instance:testCoshPositive(main.CalculatorTest)]" name="testCoshPositive" duration-ms="1" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCoshPositive -->
+        <test-method status="PASS" signature="testSqrtZero()[pri:0, instance:testSqrtZero(main.CalculatorTest)]" name="testSqrtZero" duration-ms="0" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSqrtZero -->
+        <test-method status="PASS" signature="testCoshNegative()[pri:0, instance:testCoshNegative(main.CalculatorTest)]" name="testCoshNegative" duration-ms="0" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCoshNegative -->
+        <test-method status="PASS" signature="testTanhZero()[pri:0, instance:testTanhZero(main.CalculatorTest)]" name="testTanhZero" duration-ms="1" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTanhZero -->
+        <test-method status="PASS" signature="testCoshZero()[pri:0, instance:testCoshZero(main.CalculatorTest)]" name="testCoshZero" duration-ms="0" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCoshZero -->
+        <test-method status="PASS" signature="testCosZero()[pri:0, instance:testCosZero(main.CalculatorTest)]" name="testCosZero" duration-ms="0" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCosZero -->
+        <test-method status="PASS" signature="testCosPositive()[pri:0, instance:testCosPositive(main.CalculatorTest)]" name="testCosPositive" duration-ms="0" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCosPositive -->
+        <test-method status="PASS" signature="testSinhPositive()[pri:0, instance:testSinhPositive(main.CalculatorTest)]" name="testSinhPositive" duration-ms="0" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSinhPositive -->
+        <test-method status="PASS" signature="testCosNegative()[pri:0, instance:testCosNegative(main.CalculatorTest)]" name="testCosNegative" duration-ms="0" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCosNegative -->
+        <test-method status="PASS" signature="testSinhNegative()[pri:0, instance:testSinhNegative(main.CalculatorTest)]" name="testSinhNegative" duration-ms="1" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSinhNegative -->
+        <test-method status="PASS" signature="testSinhZero()[pri:0, instance:testSinhZero(main.CalculatorTest)]" name="testSinhZero" duration-ms="0" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSinhZero -->
+        <test-method status="PASS" signature="testMultiplyZero()[pri:0, instance:testMultiplyZero(main.CalculatorTest)]" name="testMultiplyZero" duration-ms="0" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMultiplyZero -->
+        <test-method status="PASS" signature="testDivideZero()[pri:0, instance:testDivideZero(main.CalculatorTest)]" name="testDivideZero" duration-ms="0" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDivideZero -->
+        <test-method status="PASS" signature="testSubtractPositive()[pri:0, instance:testSubtractPositive(main.CalculatorTest)]" name="testSubtractPositive" duration-ms="0" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSubtractPositive -->
+        <test-method status="PASS" signature="testSinZero()[pri:0, instance:testSinZero(main.CalculatorTest)]" name="testSinZero" duration-ms="1" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSinZero -->
+        <test-method status="PASS" signature="testSubtractNegative()[pri:0, instance:testSubtractNegative(main.CalculatorTest)]" name="testSubtractNegative" duration-ms="0" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSubtractNegative -->
+        <test-method status="PASS" signature="testSubtractZero()[pri:0, instance:testSubtractZero(main.CalculatorTest)]" name="testSubtractZero" duration-ms="0" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSubtractZero -->
+        <test-method status="PASS" signature="testDividePositive()[pri:0, instance:testDividePositive(main.CalculatorTest)]" name="testDividePositive" duration-ms="1" started-at="2018-12-14T13:48:22Z" finished-at="2018-12-14T13:48:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDividePositive -->
       </class> <!-- main.CalculatorTest -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->

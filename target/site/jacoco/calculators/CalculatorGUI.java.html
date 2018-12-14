@@ -11,7 +11,11 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
-
+/**
+ * The GUI for the Calculator class.
+ * @author Ruben
+ *
+ */
 public class CalculatorGUI {
 	JFrame jf;
 	GridBagLayout gbl;
@@ -45,311 +49,313 @@ public class CalculatorGUI {
 	JButton plusb;
 	JButton equalsb;
 	JPanel jcp;
-	private JButton button;
 	
 	
-<span class="fc" id="L51">	public CalculatorGUI() {</span>
-<span class="fc" id="L52">		jf = new JFrame();</span>
+	
+<span class="fc" id="L55">	public CalculatorGUI() {</span>
+<span class="fc" id="L56">		jf = new JFrame();</span>
 		
-<span class="fc" id="L54">		jf.getContentPane().setLayout(new BorderLayout());</span>
-		
-		
-		//jf.setResizable(false);
-<span class="fc" id="L58">		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</span>
-		
-<span class="fc" id="L60">		jf.setSize(398, 391);</span>
-<span class="fc" id="L61">		jf.setLocationRelativeTo(null);</span>
-		
-		
-<span class="fc" id="L64">		jcp = new JPanel();</span>
+<span class="fc" id="L58">		jf.getContentPane().setLayout(new BorderLayout());</span>
 		
 		
 		
+<span class="fc" id="L62">		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</span>
 		
-<span class="fc" id="L69">		gbl = new GridBagLayout();</span>
-<span class="fc" id="L70">		gbl.rowWeights = new double[]{1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};</span>
-<span class="fc" id="L71">		gbl.rowHeights = new int[] {0, 50, 56, 40, 40, 40, 40, 40, 40};</span>
-<span class="fc" id="L72">		gbl.columnWidths = new int[] {0, 75, 75, 75, 75, 75};</span>
-<span class="fc" id="L73">		gbl.columnWeights = new double[]{1.0, 0.0, 0.0, 0.0, 0.0, 0.0};</span>
-<span class="fc" id="L74">		jf.getContentPane().setLayout(gbl);</span>
+<span class="fc" id="L64">		jf.setSize(398, 391);</span>
+<span class="fc" id="L65">		jf.setLocationRelativeTo(null);</span>
+<span class="fc" id="L66">		jf.setResizable(false);</span>
 		
-<span class="fc" id="L76">		textf = new JTextField();</span>
-<span class="fc" id="L77">		textf.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 18));</span>
-<span class="fc" id="L78">		textf.setHorizontalAlignment(SwingConstants.TRAILING);</span>
-<span class="fc" id="L79">		GridBagConstraints gbc_textf = new GridBagConstraints();</span>
-<span class="fc" id="L80">		gbc_textf.gridwidth = 5;</span>
-<span class="fc" id="L81">		gbc_textf.insets = new Insets(0, 0, 5, 5);</span>
-<span class="fc" id="L82">		gbc_textf.fill = GridBagConstraints.BOTH;</span>
-<span class="fc" id="L83">		gbc_textf.gridx = 1;</span>
-<span class="fc" id="L84">		gbc_textf.gridy = 1;</span>
-<span class="fc" id="L85">		jf.getContentPane().add(textf, gbc_textf);</span>
 		
-<span class="fc" id="L87">		textf.setColumns(10);</span>
+<span class="fc" id="L69">		jcp = new JPanel();</span>
 		
-<span class="fc" id="L89">		memoryclearb = new JButton(&quot;MC&quot;);</span>
-<span class="fc" id="L90">		memoryclearb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
-<span class="fc" id="L91">		GridBagConstraints gbc_memoryclearb = new GridBagConstraints();</span>
-<span class="fc" id="L92">		gbc_memoryclearb.fill = GridBagConstraints.BOTH;</span>
-<span class="fc" id="L93">		gbc_memoryclearb.insets = new Insets(0, 0, 5, 5);</span>
-<span class="fc" id="L94">		gbc_memoryclearb.gridx = 1;</span>
-<span class="fc" id="L95">		gbc_memoryclearb.gridy = 3;</span>
-<span class="fc" id="L96">		jf.getContentPane().add(memoryclearb, gbc_memoryclearb);</span>
 		
-<span class="fc" id="L98">		memoryrecallb = new JButton(&quot;MR&quot;);</span>
-<span class="fc" id="L99">		memoryrecallb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
-<span class="fc" id="L100">		GridBagConstraints gbc_memoryrecallb = new GridBagConstraints();</span>
-<span class="fc" id="L101">		gbc_memoryrecallb.fill = GridBagConstraints.BOTH;</span>
-<span class="fc" id="L102">		gbc_memoryrecallb.insets = new Insets(0, 0, 5, 5);</span>
-<span class="fc" id="L103">		gbc_memoryrecallb.gridx = 2;</span>
-<span class="fc" id="L104">		gbc_memoryrecallb.gridy = 3;</span>
-<span class="fc" id="L105">		jf.getContentPane().add(memoryrecallb, gbc_memoryrecallb);</span>
 		
-<span class="fc" id="L107">		memorystoreb = new JButton(&quot;MS&quot;);</span>
-<span class="fc" id="L108">		memorystoreb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
-<span class="fc" id="L109">		GridBagConstraints gbc_memorystoreb = new GridBagConstraints();</span>
-<span class="fc" id="L110">		gbc_memorystoreb.fill = GridBagConstraints.BOTH;</span>
-<span class="fc" id="L111">		gbc_memorystoreb.insets = new Insets(0, 0, 5, 5);</span>
-<span class="fc" id="L112">		gbc_memorystoreb.gridx = 3;</span>
-<span class="fc" id="L113">		gbc_memorystoreb.gridy = 3;</span>
-<span class="fc" id="L114">		jf.getContentPane().add(memorystoreb, gbc_memorystoreb);</span>
 		
-<span class="fc" id="L116">		memoryaddb = new JButton(&quot;M+&quot;);</span>
-<span class="fc" id="L117">		memoryaddb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
-<span class="fc" id="L118">		GridBagConstraints gbc_memoryaddb = new GridBagConstraints();</span>
-<span class="fc" id="L119">		gbc_memoryaddb.fill = GridBagConstraints.BOTH;</span>
-<span class="fc" id="L120">		gbc_memoryaddb.insets = new Insets(0, 0, 5, 5);</span>
-<span class="fc" id="L121">		gbc_memoryaddb.gridx = 4;</span>
-<span class="fc" id="L122">		gbc_memoryaddb.gridy = 3;</span>
-<span class="fc" id="L123">		jf.getContentPane().add(memoryaddb, gbc_memoryaddb);</span>
+<span class="fc" id="L74">		gbl = new GridBagLayout();</span>
+<span class="fc" id="L75">		gbl.rowWeights = new double[]{1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};</span>
+<span class="fc" id="L76">		gbl.rowHeights = new int[] {0, 50, 56, 40, 40, 40, 40, 40, 40};</span>
+<span class="fc" id="L77">		gbl.columnWidths = new int[] {0, 75, 75, 75, 75, 75};</span>
+<span class="fc" id="L78">		gbl.columnWeights = new double[]{1.0, 0.0, 0.0, 0.0, 0.0, 0.0};</span>
+<span class="fc" id="L79">		jf.getContentPane().setLayout(gbl);</span>
 		
-<span class="fc" id="L125">		memorysubb = new JButton(&quot;M-&quot;);</span>
-<span class="fc" id="L126">		memorysubb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
-<span class="fc" id="L127">		GridBagConstraints gbc_memorysubb = new GridBagConstraints();</span>
-<span class="fc" id="L128">		gbc_memorysubb.fill = GridBagConstraints.BOTH;</span>
-<span class="fc" id="L129">		gbc_memorysubb.insets = new Insets(0, 0, 5, 5);</span>
-<span class="fc" id="L130">		gbc_memorysubb.gridx = 5;</span>
-<span class="fc" id="L131">		gbc_memorysubb.gridy = 3;</span>
-<span class="fc" id="L132">		jf.getContentPane().add(memorysubb, gbc_memorysubb);</span>
+<span class="fc" id="L81">		textf = new JTextField();</span>
+<span class="fc" id="L82">		textf.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 18));</span>
+<span class="fc" id="L83">		textf.setHorizontalAlignment(SwingConstants.TRAILING);</span>
+<span class="fc" id="L84">		GridBagConstraints gbc_textf = new GridBagConstraints();</span>
+<span class="fc" id="L85">		gbc_textf.gridwidth = 5;</span>
+<span class="fc" id="L86">		gbc_textf.insets = new Insets(0, 0, 5, 5);</span>
+<span class="fc" id="L87">		gbc_textf.fill = GridBagConstraints.BOTH;</span>
+<span class="fc" id="L88">		gbc_textf.gridx = 1;</span>
+<span class="fc" id="L89">		gbc_textf.gridy = 1;</span>
+<span class="fc" id="L90">		jf.getContentPane().add(textf, gbc_textf);</span>
 		
-<span class="fc" id="L134">		backb = new JButton(&quot;\u2190&quot;);</span>
-<span class="fc" id="L135">		backb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
-<span class="fc" id="L136">		GridBagConstraints gbc_backb = new GridBagConstraints();</span>
-<span class="fc" id="L137">		gbc_backb.fill = GridBagConstraints.BOTH;</span>
-<span class="fc" id="L138">		gbc_backb.insets = new Insets(0, 0, 5, 5);</span>
-<span class="fc" id="L139">		gbc_backb.gridx = 1;</span>
-<span class="fc" id="L140">		gbc_backb.gridy = 4;</span>
-<span class="fc" id="L141">		jf.getContentPane().add(backb, gbc_backb);</span>
+<span class="fc" id="L92">		textf.setColumns(10);</span>
 		
-<span class="fc" id="L143">		clearentryb = new JButton(&quot;CE&quot;);</span>
-<span class="fc" id="L144">		clearentryb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
-<span class="fc" id="L145">		GridBagConstraints gbc_clearentryb = new GridBagConstraints();</span>
-<span class="fc" id="L146">		gbc_clearentryb.fill = GridBagConstraints.BOTH;</span>
-<span class="fc" id="L147">		gbc_clearentryb.insets = new Insets(0, 0, 5, 5);</span>
-<span class="fc" id="L148">		gbc_clearentryb.gridx = 2;</span>
-<span class="fc" id="L149">		gbc_clearentryb.gridy = 4;</span>
-<span class="fc" id="L150">		jf.getContentPane().add(clearentryb, gbc_clearentryb);</span>
+<span class="fc" id="L94">		memoryclearb = new JButton(&quot;MC&quot;);</span>
+<span class="fc" id="L95">		memoryclearb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
+<span class="fc" id="L96">		GridBagConstraints gbc_memoryclearb = new GridBagConstraints();</span>
+<span class="fc" id="L97">		gbc_memoryclearb.fill = GridBagConstraints.BOTH;</span>
+<span class="fc" id="L98">		gbc_memoryclearb.insets = new Insets(0, 0, 5, 5);</span>
+<span class="fc" id="L99">		gbc_memoryclearb.gridx = 1;</span>
+<span class="fc" id="L100">		gbc_memoryclearb.gridy = 3;</span>
+<span class="fc" id="L101">		jf.getContentPane().add(memoryclearb, gbc_memoryclearb);</span>
 		
-<span class="fc" id="L152">		clearb = new JButton(&quot;C&quot;);</span>
-<span class="fc" id="L153">		clearb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
-<span class="fc" id="L154">		GridBagConstraints gbc_clearb = new GridBagConstraints();</span>
-<span class="fc" id="L155">		gbc_clearb.fill = GridBagConstraints.BOTH;</span>
-<span class="fc" id="L156">		gbc_clearb.insets = new Insets(0, 0, 5, 5);</span>
-<span class="fc" id="L157">		gbc_clearb.gridx = 3;</span>
-<span class="fc" id="L158">		gbc_clearb.gridy = 4;</span>
-<span class="fc" id="L159">		jf.getContentPane().add(clearb, gbc_clearb);</span>
+<span class="fc" id="L103">		memoryrecallb = new JButton(&quot;MR&quot;);</span>
+<span class="fc" id="L104">		memoryrecallb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
+<span class="fc" id="L105">		GridBagConstraints gbc_memoryrecallb = new GridBagConstraints();</span>
+<span class="fc" id="L106">		gbc_memoryrecallb.fill = GridBagConstraints.BOTH;</span>
+<span class="fc" id="L107">		gbc_memoryrecallb.insets = new Insets(0, 0, 5, 5);</span>
+<span class="fc" id="L108">		gbc_memoryrecallb.gridx = 2;</span>
+<span class="fc" id="L109">		gbc_memoryrecallb.gridy = 3;</span>
+<span class="fc" id="L110">		jf.getContentPane().add(memoryrecallb, gbc_memoryrecallb);</span>
 		
-<span class="fc" id="L161">		plusminusb = new JButton(&quot;\u00B1&quot;);</span>
-<span class="fc" id="L162">		plusminusb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
-<span class="fc" id="L163">		GridBagConstraints gbc_plusminusb = new GridBagConstraints();</span>
-<span class="fc" id="L164">		gbc_plusminusb.fill = GridBagConstraints.BOTH;</span>
-<span class="fc" id="L165">		gbc_plusminusb.insets = new Insets(0, 0, 5, 5);</span>
-<span class="fc" id="L166">		gbc_plusminusb.gridx = 4;</span>
-<span class="fc" id="L167">		gbc_plusminusb.gridy = 4;</span>
-<span class="fc" id="L168">		jf.getContentPane().add(plusminusb, gbc_plusminusb);</span>
+<span class="fc" id="L112">		memorystoreb = new JButton(&quot;MS&quot;);</span>
+<span class="fc" id="L113">		memorystoreb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
+<span class="fc" id="L114">		GridBagConstraints gbc_memorystoreb = new GridBagConstraints();</span>
+<span class="fc" id="L115">		gbc_memorystoreb.fill = GridBagConstraints.BOTH;</span>
+<span class="fc" id="L116">		gbc_memorystoreb.insets = new Insets(0, 0, 5, 5);</span>
+<span class="fc" id="L117">		gbc_memorystoreb.gridx = 3;</span>
+<span class="fc" id="L118">		gbc_memorystoreb.gridy = 3;</span>
+<span class="fc" id="L119">		jf.getContentPane().add(memorystoreb, gbc_memorystoreb);</span>
 		
-<span class="fc" id="L170">		squarerootb = new JButton(&quot;\u221A&quot;);</span>
-<span class="fc" id="L171">		squarerootb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
-<span class="fc" id="L172">		GridBagConstraints gbc_squarerootb = new GridBagConstraints();</span>
-<span class="fc" id="L173">		gbc_squarerootb.fill = GridBagConstraints.BOTH;</span>
-<span class="fc" id="L174">		gbc_squarerootb.insets = new Insets(0, 0, 5, 5);</span>
-<span class="fc" id="L175">		gbc_squarerootb.gridx = 5;</span>
-<span class="fc" id="L176">		gbc_squarerootb.gridy = 4;</span>
-<span class="fc" id="L177">		jf.getContentPane().add(squarerootb, gbc_squarerootb);</span>
+<span class="fc" id="L121">		memoryaddb = new JButton(&quot;M+&quot;);</span>
+<span class="fc" id="L122">		memoryaddb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
+<span class="fc" id="L123">		GridBagConstraints gbc_memoryaddb = new GridBagConstraints();</span>
+<span class="fc" id="L124">		gbc_memoryaddb.fill = GridBagConstraints.BOTH;</span>
+<span class="fc" id="L125">		gbc_memoryaddb.insets = new Insets(0, 0, 5, 5);</span>
+<span class="fc" id="L126">		gbc_memoryaddb.gridx = 4;</span>
+<span class="fc" id="L127">		gbc_memoryaddb.gridy = 3;</span>
+<span class="fc" id="L128">		jf.getContentPane().add(memoryaddb, gbc_memoryaddb);</span>
 		
-<span class="fc" id="L179">		sevenb = new JButton(&quot;7&quot;);</span>
-<span class="fc" id="L180">		sevenb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
-<span class="fc" id="L181">		GridBagConstraints gbc_sevenb = new GridBagConstraints();</span>
-<span class="fc" id="L182">		gbc_sevenb.fill = GridBagConstraints.BOTH;</span>
-<span class="fc" id="L183">		gbc_sevenb.insets = new Insets(0, 0, 5, 5);</span>
-<span class="fc" id="L184">		gbc_sevenb.gridx = 1;</span>
-<span class="fc" id="L185">		gbc_sevenb.gridy = 5;</span>
-<span class="fc" id="L186">		jf.getContentPane().add(sevenb, gbc_sevenb);</span>
+<span class="fc" id="L130">		memorysubb = new JButton(&quot;M-&quot;);</span>
+<span class="fc" id="L131">		memorysubb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
+<span class="fc" id="L132">		GridBagConstraints gbc_memorysubb = new GridBagConstraints();</span>
+<span class="fc" id="L133">		gbc_memorysubb.fill = GridBagConstraints.BOTH;</span>
+<span class="fc" id="L134">		gbc_memorysubb.insets = new Insets(0, 0, 5, 5);</span>
+<span class="fc" id="L135">		gbc_memorysubb.gridx = 5;</span>
+<span class="fc" id="L136">		gbc_memorysubb.gridy = 3;</span>
+<span class="fc" id="L137">		jf.getContentPane().add(memorysubb, gbc_memorysubb);</span>
 		
-<span class="fc" id="L188">		eightb = new JButton(&quot;8&quot;);</span>
-<span class="fc" id="L189">		eightb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
-<span class="fc" id="L190">		GridBagConstraints gbc_eightb = new GridBagConstraints();</span>
-<span class="fc" id="L191">		gbc_eightb.fill = GridBagConstraints.BOTH;</span>
-<span class="fc" id="L192">		gbc_eightb.insets = new Insets(0, 0, 5, 5);</span>
-<span class="fc" id="L193">		gbc_eightb.gridx = 2;</span>
-<span class="fc" id="L194">		gbc_eightb.gridy = 5;</span>
-<span class="fc" id="L195">		jf.getContentPane().add(eightb, gbc_eightb);</span>
+<span class="fc" id="L139">		backb = new JButton(&quot;\u2190&quot;);</span>
+<span class="fc" id="L140">		backb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
+<span class="fc" id="L141">		GridBagConstraints gbc_backb = new GridBagConstraints();</span>
+<span class="fc" id="L142">		gbc_backb.fill = GridBagConstraints.BOTH;</span>
+<span class="fc" id="L143">		gbc_backb.insets = new Insets(0, 0, 5, 5);</span>
+<span class="fc" id="L144">		gbc_backb.gridx = 1;</span>
+<span class="fc" id="L145">		gbc_backb.gridy = 4;</span>
+<span class="fc" id="L146">		jf.getContentPane().add(backb, gbc_backb);</span>
 		
-<span class="fc" id="L197">		nineb = new JButton(&quot;9&quot;);</span>
-<span class="fc" id="L198">		nineb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
-<span class="fc" id="L199">		GridBagConstraints gbc_nineb = new GridBagConstraints();</span>
-<span class="fc" id="L200">		gbc_nineb.fill = GridBagConstraints.BOTH;</span>
-<span class="fc" id="L201">		gbc_nineb.insets = new Insets(0, 0, 5, 5);</span>
-<span class="fc" id="L202">		gbc_nineb.gridx = 3;</span>
-<span class="fc" id="L203">		gbc_nineb.gridy = 5;</span>
-<span class="fc" id="L204">		jf.getContentPane().add(nineb, gbc_nineb);</span>
+<span class="fc" id="L148">		clearentryb = new JButton(&quot;CE&quot;);</span>
+<span class="fc" id="L149">		clearentryb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
+<span class="fc" id="L150">		GridBagConstraints gbc_clearentryb = new GridBagConstraints();</span>
+<span class="fc" id="L151">		gbc_clearentryb.fill = GridBagConstraints.BOTH;</span>
+<span class="fc" id="L152">		gbc_clearentryb.insets = new Insets(0, 0, 5, 5);</span>
+<span class="fc" id="L153">		gbc_clearentryb.gridx = 2;</span>
+<span class="fc" id="L154">		gbc_clearentryb.gridy = 4;</span>
+<span class="fc" id="L155">		jf.getContentPane().add(clearentryb, gbc_clearentryb);</span>
 		
-<span class="fc" id="L206">		divideb = new JButton(&quot;/&quot;);</span>
-<span class="fc" id="L207">		divideb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
-<span class="fc" id="L208">		GridBagConstraints gbc_divideb = new GridBagConstraints();</span>
-<span class="fc" id="L209">		gbc_divideb.fill = GridBagConstraints.BOTH;</span>
-<span class="fc" id="L210">		gbc_divideb.insets = new Insets(0, 0, 5, 5);</span>
-<span class="fc" id="L211">		gbc_divideb.gridx = 4;</span>
-<span class="fc" id="L212">		gbc_divideb.gridy = 5;</span>
-<span class="fc" id="L213">		jf.getContentPane().add(divideb, gbc_divideb);</span>
+<span class="fc" id="L157">		clearb = new JButton(&quot;C&quot;);</span>
+<span class="fc" id="L158">		clearb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
+<span class="fc" id="L159">		GridBagConstraints gbc_clearb = new GridBagConstraints();</span>
+<span class="fc" id="L160">		gbc_clearb.fill = GridBagConstraints.BOTH;</span>
+<span class="fc" id="L161">		gbc_clearb.insets = new Insets(0, 0, 5, 5);</span>
+<span class="fc" id="L162">		gbc_clearb.gridx = 3;</span>
+<span class="fc" id="L163">		gbc_clearb.gridy = 4;</span>
+<span class="fc" id="L164">		jf.getContentPane().add(clearb, gbc_clearb);</span>
 		
-<span class="fc" id="L215">		percentb = new JButton(&quot;%&quot;);</span>
-<span class="fc" id="L216">		percentb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
-<span class="fc" id="L217">		GridBagConstraints gbc_percentb = new GridBagConstraints();</span>
-<span class="fc" id="L218">		gbc_percentb.fill = GridBagConstraints.BOTH;</span>
-<span class="fc" id="L219">		gbc_percentb.insets = new Insets(0, 0, 5, 5);</span>
-<span class="fc" id="L220">		gbc_percentb.gridx = 5;</span>
-<span class="fc" id="L221">		gbc_percentb.gridy = 5;</span>
-<span class="fc" id="L222">		jf.getContentPane().add(percentb, gbc_percentb);</span>
+<span class="fc" id="L166">		plusminusb = new JButton(&quot;\u00B1&quot;);</span>
+<span class="fc" id="L167">		plusminusb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
+<span class="fc" id="L168">		GridBagConstraints gbc_plusminusb = new GridBagConstraints();</span>
+<span class="fc" id="L169">		gbc_plusminusb.fill = GridBagConstraints.BOTH;</span>
+<span class="fc" id="L170">		gbc_plusminusb.insets = new Insets(0, 0, 5, 5);</span>
+<span class="fc" id="L171">		gbc_plusminusb.gridx = 4;</span>
+<span class="fc" id="L172">		gbc_plusminusb.gridy = 4;</span>
+<span class="fc" id="L173">		jf.getContentPane().add(plusminusb, gbc_plusminusb);</span>
 		
-<span class="fc" id="L224">		fourb = new JButton(&quot;4&quot;);</span>
-<span class="fc" id="L225">		fourb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
-<span class="fc" id="L226">		GridBagConstraints gbc_fourb = new GridBagConstraints();</span>
-<span class="fc" id="L227">		gbc_fourb.fill = GridBagConstraints.BOTH;</span>
-<span class="fc" id="L228">		gbc_fourb.insets = new Insets(0, 0, 5, 5);</span>
-<span class="fc" id="L229">		gbc_fourb.gridx = 1;</span>
-<span class="fc" id="L230">		gbc_fourb.gridy = 6;</span>
-<span class="fc" id="L231">		jf.getContentPane().add(fourb, gbc_fourb);</span>
+<span class="fc" id="L175">		squarerootb = new JButton(&quot;\u221A&quot;);</span>
+<span class="fc" id="L176">		squarerootb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
+<span class="fc" id="L177">		GridBagConstraints gbc_squarerootb = new GridBagConstraints();</span>
+<span class="fc" id="L178">		gbc_squarerootb.fill = GridBagConstraints.BOTH;</span>
+<span class="fc" id="L179">		gbc_squarerootb.insets = new Insets(0, 0, 5, 5);</span>
+<span class="fc" id="L180">		gbc_squarerootb.gridx = 5;</span>
+<span class="fc" id="L181">		gbc_squarerootb.gridy = 4;</span>
+<span class="fc" id="L182">		jf.getContentPane().add(squarerootb, gbc_squarerootb);</span>
 		
-<span class="fc" id="L233">		fiveb = new JButton(&quot;5&quot;);</span>
-<span class="fc" id="L234">		fiveb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
-<span class="fc" id="L235">		GridBagConstraints gbc_fiveb = new GridBagConstraints();</span>
-<span class="fc" id="L236">		gbc_fiveb.fill = GridBagConstraints.BOTH;</span>
-<span class="fc" id="L237">		gbc_fiveb.insets = new Insets(0, 0, 5, 5);</span>
-<span class="fc" id="L238">		gbc_fiveb.gridx = 2;</span>
-<span class="fc" id="L239">		gbc_fiveb.gridy = 6;</span>
-<span class="fc" id="L240">		jf.getContentPane().add(fiveb, gbc_fiveb);</span>
+<span class="fc" id="L184">		sevenb = new JButton(&quot;7&quot;);</span>
+<span class="fc" id="L185">		sevenb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
+<span class="fc" id="L186">		GridBagConstraints gbc_sevenb = new GridBagConstraints();</span>
+<span class="fc" id="L187">		gbc_sevenb.fill = GridBagConstraints.BOTH;</span>
+<span class="fc" id="L188">		gbc_sevenb.insets = new Insets(0, 0, 5, 5);</span>
+<span class="fc" id="L189">		gbc_sevenb.gridx = 1;</span>
+<span class="fc" id="L190">		gbc_sevenb.gridy = 5;</span>
+<span class="fc" id="L191">		jf.getContentPane().add(sevenb, gbc_sevenb);</span>
 		
-<span class="fc" id="L242">		sixb = new JButton(&quot;6&quot;);</span>
-<span class="fc" id="L243">		sixb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
-<span class="fc" id="L244">		GridBagConstraints gbc_sixb = new GridBagConstraints();</span>
-<span class="fc" id="L245">		gbc_sixb.fill = GridBagConstraints.BOTH;</span>
-<span class="fc" id="L246">		gbc_sixb.insets = new Insets(0, 0, 5, 5);</span>
-<span class="fc" id="L247">		gbc_sixb.gridx = 3;</span>
-<span class="fc" id="L248">		gbc_sixb.gridy = 6;</span>
-<span class="fc" id="L249">		jf.getContentPane().add(sixb, gbc_sixb);</span>
+<span class="fc" id="L193">		eightb = new JButton(&quot;8&quot;);</span>
+<span class="fc" id="L194">		eightb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
+<span class="fc" id="L195">		GridBagConstraints gbc_eightb = new GridBagConstraints();</span>
+<span class="fc" id="L196">		gbc_eightb.fill = GridBagConstraints.BOTH;</span>
+<span class="fc" id="L197">		gbc_eightb.insets = new Insets(0, 0, 5, 5);</span>
+<span class="fc" id="L198">		gbc_eightb.gridx = 2;</span>
+<span class="fc" id="L199">		gbc_eightb.gridy = 5;</span>
+<span class="fc" id="L200">		jf.getContentPane().add(eightb, gbc_eightb);</span>
 		
-<span class="fc" id="L251">		multiplyb = new JButton(&quot;*&quot;);</span>
-<span class="fc" id="L252">		multiplyb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
-<span class="fc" id="L253">		GridBagConstraints gbc_multiplyb = new GridBagConstraints();</span>
-<span class="fc" id="L254">		gbc_multiplyb.fill = GridBagConstraints.BOTH;</span>
-<span class="fc" id="L255">		gbc_multiplyb.insets = new Insets(0, 0, 5, 5);</span>
-<span class="fc" id="L256">		gbc_multiplyb.gridx = 4;</span>
-<span class="fc" id="L257">		gbc_multiplyb.gridy = 6;</span>
-<span class="fc" id="L258">		jf.getContentPane().add(multiplyb, gbc_multiplyb);</span>
+<span class="fc" id="L202">		nineb = new JButton(&quot;9&quot;);</span>
+<span class="fc" id="L203">		nineb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
+<span class="fc" id="L204">		GridBagConstraints gbc_nineb = new GridBagConstraints();</span>
+<span class="fc" id="L205">		gbc_nineb.fill = GridBagConstraints.BOTH;</span>
+<span class="fc" id="L206">		gbc_nineb.insets = new Insets(0, 0, 5, 5);</span>
+<span class="fc" id="L207">		gbc_nineb.gridx = 3;</span>
+<span class="fc" id="L208">		gbc_nineb.gridy = 5;</span>
+<span class="fc" id="L209">		jf.getContentPane().add(nineb, gbc_nineb);</span>
 		
-<span class="fc" id="L260">		oneDivByXb = new JButton(&quot;1/x&quot;);</span>
-<span class="fc" id="L261">		oneDivByXb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
-<span class="fc" id="L262">		GridBagConstraints gbc_oneDivByXb = new GridBagConstraints();</span>
-<span class="fc" id="L263">		gbc_oneDivByXb.fill = GridBagConstraints.BOTH;</span>
-<span class="fc" id="L264">		gbc_oneDivByXb.insets = new Insets(0, 0, 5, 5);</span>
-<span class="fc" id="L265">		gbc_oneDivByXb.gridx = 5;</span>
-<span class="fc" id="L266">		gbc_oneDivByXb.gridy = 6;</span>
-<span class="fc" id="L267">		jf.getContentPane().add(oneDivByXb, gbc_oneDivByXb);</span>
+<span class="fc" id="L211">		divideb = new JButton(&quot;/&quot;);</span>
+<span class="fc" id="L212">		divideb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
+<span class="fc" id="L213">		GridBagConstraints gbc_divideb = new GridBagConstraints();</span>
+<span class="fc" id="L214">		gbc_divideb.fill = GridBagConstraints.BOTH;</span>
+<span class="fc" id="L215">		gbc_divideb.insets = new Insets(0, 0, 5, 5);</span>
+<span class="fc" id="L216">		gbc_divideb.gridx = 4;</span>
+<span class="fc" id="L217">		gbc_divideb.gridy = 5;</span>
+<span class="fc" id="L218">		jf.getContentPane().add(divideb, gbc_divideb);</span>
 		
-<span class="fc" id="L269">		oneb = new JButton(&quot;1&quot;);</span>
-<span class="fc" id="L270">		oneb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
-<span class="fc" id="L271">		GridBagConstraints gbc_oneb = new GridBagConstraints();</span>
-<span class="fc" id="L272">		gbc_oneb.fill = GridBagConstraints.BOTH;</span>
-<span class="fc" id="L273">		gbc_oneb.insets = new Insets(0, 0, 5, 5);</span>
-<span class="fc" id="L274">		gbc_oneb.gridx = 1;</span>
-<span class="fc" id="L275">		gbc_oneb.gridy = 7;</span>
-<span class="fc" id="L276">		jf.getContentPane().add(oneb, gbc_oneb);</span>
+<span class="fc" id="L220">		percentb = new JButton(&quot;%&quot;);</span>
+<span class="fc" id="L221">		percentb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
+<span class="fc" id="L222">		GridBagConstraints gbc_percentb = new GridBagConstraints();</span>
+<span class="fc" id="L223">		gbc_percentb.fill = GridBagConstraints.BOTH;</span>
+<span class="fc" id="L224">		gbc_percentb.insets = new Insets(0, 0, 5, 5);</span>
+<span class="fc" id="L225">		gbc_percentb.gridx = 5;</span>
+<span class="fc" id="L226">		gbc_percentb.gridy = 5;</span>
+<span class="fc" id="L227">		jf.getContentPane().add(percentb, gbc_percentb);</span>
 		
-<span class="fc" id="L278">		twob = new JButton(&quot;2&quot;);</span>
-<span class="fc" id="L279">		twob.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
-<span class="fc" id="L280">		GridBagConstraints gbc_twob = new GridBagConstraints();</span>
-<span class="fc" id="L281">		gbc_twob.fill = GridBagConstraints.BOTH;</span>
-<span class="fc" id="L282">		gbc_twob.insets = new Insets(0, 0, 5, 5);</span>
-<span class="fc" id="L283">		gbc_twob.gridx = 2;</span>
-<span class="fc" id="L284">		gbc_twob.gridy = 7;</span>
-<span class="fc" id="L285">		jf.getContentPane().add(twob, gbc_twob);</span>
+<span class="fc" id="L229">		fourb = new JButton(&quot;4&quot;);</span>
+<span class="fc" id="L230">		fourb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
+<span class="fc" id="L231">		GridBagConstraints gbc_fourb = new GridBagConstraints();</span>
+<span class="fc" id="L232">		gbc_fourb.fill = GridBagConstraints.BOTH;</span>
+<span class="fc" id="L233">		gbc_fourb.insets = new Insets(0, 0, 5, 5);</span>
+<span class="fc" id="L234">		gbc_fourb.gridx = 1;</span>
+<span class="fc" id="L235">		gbc_fourb.gridy = 6;</span>
+<span class="fc" id="L236">		jf.getContentPane().add(fourb, gbc_fourb);</span>
 		
-<span class="fc" id="L287">		threeb = new JButton(&quot;3&quot;);</span>
-<span class="fc" id="L288">		threeb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
-<span class="fc" id="L289">		GridBagConstraints gbc_threeb = new GridBagConstraints();</span>
-<span class="fc" id="L290">		gbc_threeb.fill = GridBagConstraints.BOTH;</span>
-<span class="fc" id="L291">		gbc_threeb.insets = new Insets(0, 0, 5, 5);</span>
-<span class="fc" id="L292">		gbc_threeb.gridx = 3;</span>
-<span class="fc" id="L293">		gbc_threeb.gridy = 7;</span>
-<span class="fc" id="L294">		jf.getContentPane().add(threeb, gbc_threeb);</span>
+<span class="fc" id="L238">		fiveb = new JButton(&quot;5&quot;);</span>
+<span class="fc" id="L239">		fiveb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
+<span class="fc" id="L240">		GridBagConstraints gbc_fiveb = new GridBagConstraints();</span>
+<span class="fc" id="L241">		gbc_fiveb.fill = GridBagConstraints.BOTH;</span>
+<span class="fc" id="L242">		gbc_fiveb.insets = new Insets(0, 0, 5, 5);</span>
+<span class="fc" id="L243">		gbc_fiveb.gridx = 2;</span>
+<span class="fc" id="L244">		gbc_fiveb.gridy = 6;</span>
+<span class="fc" id="L245">		jf.getContentPane().add(fiveb, gbc_fiveb);</span>
 		
-<span class="fc" id="L296">		minusb = new JButton(&quot;-&quot;);</span>
-<span class="fc" id="L297">		minusb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
-<span class="fc" id="L298">		GridBagConstraints gbc_minusb = new GridBagConstraints();</span>
-<span class="fc" id="L299">		gbc_minusb.fill = GridBagConstraints.BOTH;</span>
-<span class="fc" id="L300">		gbc_minusb.insets = new Insets(0, 0, 5, 5);</span>
-<span class="fc" id="L301">		gbc_minusb.gridx = 4;</span>
-<span class="fc" id="L302">		gbc_minusb.gridy = 7;</span>
-<span class="fc" id="L303">		jf.getContentPane().add(minusb, gbc_minusb);</span>
+<span class="fc" id="L247">		sixb = new JButton(&quot;6&quot;);</span>
+<span class="fc" id="L248">		sixb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
+<span class="fc" id="L249">		GridBagConstraints gbc_sixb = new GridBagConstraints();</span>
+<span class="fc" id="L250">		gbc_sixb.fill = GridBagConstraints.BOTH;</span>
+<span class="fc" id="L251">		gbc_sixb.insets = new Insets(0, 0, 5, 5);</span>
+<span class="fc" id="L252">		gbc_sixb.gridx = 3;</span>
+<span class="fc" id="L253">		gbc_sixb.gridy = 6;</span>
+<span class="fc" id="L254">		jf.getContentPane().add(sixb, gbc_sixb);</span>
 		
-<span class="fc" id="L305">		zerob = new JButton(&quot;0&quot;);</span>
-<span class="fc" id="L306">		zerob.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
-<span class="fc" id="L307">		GridBagConstraints gbc_zerob = new GridBagConstraints();</span>
-<span class="fc" id="L308">		gbc_zerob.fill = GridBagConstraints.BOTH;</span>
-<span class="fc" id="L309">		gbc_zerob.gridwidth = 2;</span>
-<span class="fc" id="L310">		gbc_zerob.insets = new Insets(0, 0, 5, 5);</span>
-<span class="fc" id="L311">		gbc_zerob.gridx = 1;</span>
-<span class="fc" id="L312">		gbc_zerob.gridy = 8;</span>
-<span class="fc" id="L313">		jf.getContentPane().add(zerob, gbc_zerob);</span>
+<span class="fc" id="L256">		multiplyb = new JButton(&quot;*&quot;);</span>
+<span class="fc" id="L257">		multiplyb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
+<span class="fc" id="L258">		GridBagConstraints gbc_multiplyb = new GridBagConstraints();</span>
+<span class="fc" id="L259">		gbc_multiplyb.fill = GridBagConstraints.BOTH;</span>
+<span class="fc" id="L260">		gbc_multiplyb.insets = new Insets(0, 0, 5, 5);</span>
+<span class="fc" id="L261">		gbc_multiplyb.gridx = 4;</span>
+<span class="fc" id="L262">		gbc_multiplyb.gridy = 6;</span>
+<span class="fc" id="L263">		jf.getContentPane().add(multiplyb, gbc_multiplyb);</span>
 		
-<span class="fc" id="L315">		commab = new JButton(&quot;.&quot;);</span>
-<span class="fc" id="L316">		commab.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
-<span class="fc" id="L317">		GridBagConstraints gbc_commab = new GridBagConstraints();</span>
-<span class="fc" id="L318">		gbc_commab.fill = GridBagConstraints.BOTH;</span>
-<span class="fc" id="L319">		gbc_commab.insets = new Insets(0, 0, 5, 5);</span>
-<span class="fc" id="L320">		gbc_commab.gridx = 3;</span>
-<span class="fc" id="L321">		gbc_commab.gridy = 8;</span>
-<span class="fc" id="L322">		jf.getContentPane().add(commab, gbc_commab);</span>
+<span class="fc" id="L265">		oneDivByXb = new JButton(&quot;1/x&quot;);</span>
+<span class="fc" id="L266">		oneDivByXb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
+<span class="fc" id="L267">		GridBagConstraints gbc_oneDivByXb = new GridBagConstraints();</span>
+<span class="fc" id="L268">		gbc_oneDivByXb.fill = GridBagConstraints.BOTH;</span>
+<span class="fc" id="L269">		gbc_oneDivByXb.insets = new Insets(0, 0, 5, 5);</span>
+<span class="fc" id="L270">		gbc_oneDivByXb.gridx = 5;</span>
+<span class="fc" id="L271">		gbc_oneDivByXb.gridy = 6;</span>
+<span class="fc" id="L272">		jf.getContentPane().add(oneDivByXb, gbc_oneDivByXb);</span>
 		
-<span class="fc" id="L324">		plusb = new JButton(&quot;+&quot;);</span>
-<span class="fc" id="L325">		plusb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
-<span class="fc" id="L326">		GridBagConstraints gbc_plusb = new GridBagConstraints();</span>
-<span class="fc" id="L327">		gbc_plusb.fill = GridBagConstraints.BOTH;</span>
-<span class="fc" id="L328">		gbc_plusb.insets = new Insets(0, 0, 5, 5);</span>
-<span class="fc" id="L329">		gbc_plusb.gridx = 4;</span>
-<span class="fc" id="L330">		gbc_plusb.gridy = 8;</span>
-<span class="fc" id="L331">		jf.getContentPane().add(plusb, gbc_plusb);</span>
+<span class="fc" id="L274">		oneb = new JButton(&quot;1&quot;);</span>
+<span class="fc" id="L275">		oneb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
+<span class="fc" id="L276">		GridBagConstraints gbc_oneb = new GridBagConstraints();</span>
+<span class="fc" id="L277">		gbc_oneb.fill = GridBagConstraints.BOTH;</span>
+<span class="fc" id="L278">		gbc_oneb.insets = new Insets(0, 0, 5, 5);</span>
+<span class="fc" id="L279">		gbc_oneb.gridx = 1;</span>
+<span class="fc" id="L280">		gbc_oneb.gridy = 7;</span>
+<span class="fc" id="L281">		jf.getContentPane().add(oneb, gbc_oneb);</span>
 		
-<span class="fc" id="L333">		equalsb = new JButton(&quot;=&quot;);</span>
-<span class="fc" id="L334">		equalsb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
-<span class="fc" id="L335">		GridBagConstraints gbc_equalsb = new GridBagConstraints();</span>
-<span class="fc" id="L336">		gbc_equalsb.insets = new Insets(0, 0, 5, 5);</span>
-<span class="fc" id="L337">		gbc_equalsb.fill = GridBagConstraints.BOTH;</span>
-<span class="fc" id="L338">		gbc_equalsb.gridheight = 2;</span>
-<span class="fc" id="L339">		gbc_equalsb.gridx = 5;</span>
-<span class="fc" id="L340">		gbc_equalsb.gridy = 7;</span>
-<span class="fc" id="L341">		jf.getContentPane().add(equalsb, gbc_equalsb);</span>
+<span class="fc" id="L283">		twob = new JButton(&quot;2&quot;);</span>
+<span class="fc" id="L284">		twob.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
+<span class="fc" id="L285">		GridBagConstraints gbc_twob = new GridBagConstraints();</span>
+<span class="fc" id="L286">		gbc_twob.fill = GridBagConstraints.BOTH;</span>
+<span class="fc" id="L287">		gbc_twob.insets = new Insets(0, 0, 5, 5);</span>
+<span class="fc" id="L288">		gbc_twob.gridx = 2;</span>
+<span class="fc" id="L289">		gbc_twob.gridy = 7;</span>
+<span class="fc" id="L290">		jf.getContentPane().add(twob, gbc_twob);</span>
 		
-<span class="fc" id="L343">		plusminusb.setEnabled(false);</span>
-<span class="fc" id="L344">		memoryrecallb.setEnabled(false);</span>
-<span class="fc" id="L345">		memoryclearb.setEnabled(false);</span>
-<span class="fc" id="L346">		memorystoreb.setEnabled(false);</span>
-<span class="fc" id="L347">		memoryaddb.setEnabled(false);</span>
-<span class="fc" id="L348">		memorysubb.setEnabled(false);</span>
-<span class="fc" id="L349">		clearentryb.setEnabled(false);</span>
-<span class="fc" id="L350">		oneDivByXb.setEnabled(false);</span>
+<span class="fc" id="L292">		threeb = new JButton(&quot;3&quot;);</span>
+<span class="fc" id="L293">		threeb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
+<span class="fc" id="L294">		GridBagConstraints gbc_threeb = new GridBagConstraints();</span>
+<span class="fc" id="L295">		gbc_threeb.fill = GridBagConstraints.BOTH;</span>
+<span class="fc" id="L296">		gbc_threeb.insets = new Insets(0, 0, 5, 5);</span>
+<span class="fc" id="L297">		gbc_threeb.gridx = 3;</span>
+<span class="fc" id="L298">		gbc_threeb.gridy = 7;</span>
+<span class="fc" id="L299">		jf.getContentPane().add(threeb, gbc_threeb);</span>
 		
-<span class="fc" id="L352">		jf.setVisible(true);</span>
-<span class="fc" id="L353">	}</span>
+<span class="fc" id="L301">		minusb = new JButton(&quot;-&quot;);</span>
+<span class="fc" id="L302">		minusb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
+<span class="fc" id="L303">		GridBagConstraints gbc_minusb = new GridBagConstraints();</span>
+<span class="fc" id="L304">		gbc_minusb.fill = GridBagConstraints.BOTH;</span>
+<span class="fc" id="L305">		gbc_minusb.insets = new Insets(0, 0, 5, 5);</span>
+<span class="fc" id="L306">		gbc_minusb.gridx = 4;</span>
+<span class="fc" id="L307">		gbc_minusb.gridy = 7;</span>
+<span class="fc" id="L308">		jf.getContentPane().add(minusb, gbc_minusb);</span>
+		
+<span class="fc" id="L310">		zerob = new JButton(&quot;0&quot;);</span>
+<span class="fc" id="L311">		zerob.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
+<span class="fc" id="L312">		GridBagConstraints gbc_zerob = new GridBagConstraints();</span>
+<span class="fc" id="L313">		gbc_zerob.fill = GridBagConstraints.BOTH;</span>
+<span class="fc" id="L314">		gbc_zerob.gridwidth = 2;</span>
+<span class="fc" id="L315">		gbc_zerob.insets = new Insets(0, 0, 5, 5);</span>
+<span class="fc" id="L316">		gbc_zerob.gridx = 1;</span>
+<span class="fc" id="L317">		gbc_zerob.gridy = 8;</span>
+<span class="fc" id="L318">		jf.getContentPane().add(zerob, gbc_zerob);</span>
+		
+<span class="fc" id="L320">		commab = new JButton(&quot;.&quot;);</span>
+<span class="fc" id="L321">		commab.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
+<span class="fc" id="L322">		GridBagConstraints gbc_commab = new GridBagConstraints();</span>
+<span class="fc" id="L323">		gbc_commab.fill = GridBagConstraints.BOTH;</span>
+<span class="fc" id="L324">		gbc_commab.insets = new Insets(0, 0, 5, 5);</span>
+<span class="fc" id="L325">		gbc_commab.gridx = 3;</span>
+<span class="fc" id="L326">		gbc_commab.gridy = 8;</span>
+<span class="fc" id="L327">		jf.getContentPane().add(commab, gbc_commab);</span>
+		
+<span class="fc" id="L329">		plusb = new JButton(&quot;+&quot;);</span>
+<span class="fc" id="L330">		plusb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
+<span class="fc" id="L331">		GridBagConstraints gbc_plusb = new GridBagConstraints();</span>
+<span class="fc" id="L332">		gbc_plusb.fill = GridBagConstraints.BOTH;</span>
+<span class="fc" id="L333">		gbc_plusb.insets = new Insets(0, 0, 5, 5);</span>
+<span class="fc" id="L334">		gbc_plusb.gridx = 4;</span>
+<span class="fc" id="L335">		gbc_plusb.gridy = 8;</span>
+<span class="fc" id="L336">		jf.getContentPane().add(plusb, gbc_plusb);</span>
+		
+<span class="fc" id="L338">		equalsb = new JButton(&quot;=&quot;);</span>
+<span class="fc" id="L339">		equalsb.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
+<span class="fc" id="L340">		GridBagConstraints gbc_equalsb = new GridBagConstraints();</span>
+<span class="fc" id="L341">		gbc_equalsb.insets = new Insets(0, 0, 5, 5);</span>
+<span class="fc" id="L342">		gbc_equalsb.fill = GridBagConstraints.BOTH;</span>
+<span class="fc" id="L343">		gbc_equalsb.gridheight = 2;</span>
+<span class="fc" id="L344">		gbc_equalsb.gridx = 5;</span>
+<span class="fc" id="L345">		gbc_equalsb.gridy = 7;</span>
+<span class="fc" id="L346">		jf.getContentPane().add(equalsb, gbc_equalsb);</span>
+		
+<span class="fc" id="L348">		plusminusb.setEnabled(false);</span>
+<span class="fc" id="L349">		memoryrecallb.setEnabled(false);</span>
+<span class="fc" id="L350">		memoryclearb.setEnabled(false);</span>
+<span class="fc" id="L351">		memorystoreb.setEnabled(false);</span>
+<span class="fc" id="L352">		memoryaddb.setEnabled(false);</span>
+<span class="fc" id="L353">		memorysubb.setEnabled(false);</span>
+<span class="fc" id="L354">		clearentryb.setEnabled(false);</span>
+<span class="fc" id="L355">		oneDivByXb.setEnabled(false);</span>
+<span class="fc" id="L356">		percentb.setEnabled(false);</span>
+		
+<span class="fc" id="L358">		jf.setVisible(true);</span>
+<span class="fc" id="L359">	}</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

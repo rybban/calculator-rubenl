@@ -6,81 +6,142 @@ import javax.swing.AbstractButton;
 
 import interfaces.CalculatorAdvancedOperations;
 
+/**
+ * Adds trigonometric functions sine, cosine, tangent and hyperbolic functions hyperbolic sine, hyperbolic cosine and hyperbolic tangent
+ * to the calculator.
+ * @author Ruben
+ *
+ */
 public class SciCalculator extends Calculator implements CalculatorAdvancedOperations {
 
 	SciCalculatorGUI sc;
-<span class="fc" id="L12">	public SciCalculator() {</span>
-<span class="fc" id="L13">		sc = (SciCalculatorGUI) super.g;</span>
+<span class="fc" id="L18">	public SciCalculator() {</span>
+<span class="fc" id="L19">		sc = (SciCalculatorGUI) super.g;</span>
 		
-<span class="fc" id="L15">		sc.cosb.addActionListener(this);</span>
-<span class="fc" id="L16">		sc.coshb.addActionListener(this);</span>
-<span class="fc" id="L17">		sc.tanb.addActionListener(this);</span>
-<span class="fc" id="L18">		sc.tanhb.addActionListener(this);</span>
-<span class="fc" id="L19">		sc.sinb.addActionListener(this);</span>
-<span class="fc" id="L20">		sc.sinhb.addActionListener(this);</span>
-<span class="fc" id="L21">		sc.x2b.addActionListener(this);</span>
-<span class="fc" id="L22">		sc.x3b.addActionListener(this);</span>
+<span class="fc" id="L21">		sc.cosb.addActionListener(this);</span>
+<span class="fc" id="L22">		sc.coshb.addActionListener(this);</span>
+<span class="fc" id="L23">		sc.tanb.addActionListener(this);</span>
+<span class="fc" id="L24">		sc.tanhb.addActionListener(this);</span>
+<span class="fc" id="L25">		sc.sinb.addActionListener(this);</span>
+<span class="fc" id="L26">		sc.sinhb.addActionListener(this);</span>
+<span class="fc" id="L27">		sc.x2b.addActionListener(this);</span>
+<span class="fc" id="L28">		sc.x3b.addActionListener(this);</span>
 		
 		
-<span class="fc" id="L25">	}</span>
+<span class="fc" id="L31">	}</span>
 	
 	public void actionPerformed(ActionEvent e) {
-<span class="nc bnc" id="L28" title="All 2 branches missed.">		if ((e.getSource() == sc.cosb ||</span>
-<span class="nc bnc" id="L29" title="All 2 branches missed.">				e.getSource() == sc.coshb ||</span>
-<span class="nc bnc" id="L30" title="All 2 branches missed.">				e.getSource() == sc.sinb ||</span>
-<span class="nc bnc" id="L31" title="All 2 branches missed.">				e.getSource() == sc.sinhb ||</span>
-<span class="nc bnc" id="L32" title="All 2 branches missed.">				e.getSource() == sc.tanb ||</span>
-<span class="nc bnc" id="L33" title="All 2 branches missed.">				e.getSource() == sc.tanhb ||</span>
-<span class="nc bnc" id="L34" title="All 4 branches missed.">				e.getSource() == sc.cosb ) &amp;&amp; !recentOperator) {</span>
-<span class="nc" id="L35">			currentString = ((AbstractButton) e.getSource()).getText();</span>
-<span class="nc" id="L36">			totalString += currentString;</span>
-<span class="nc" id="L37">			super.g.textf.setText(totalString);</span>
-<span class="nc" id="L38">			System.out.println(recentOperator);</span>
-<span class="nc" id="L39">			recentOperator = true;</span>
+<span class="nc bnc" id="L34" title="All 2 branches missed.">		if ((e.getSource() == sc.cosb ||</span>
+<span class="nc bnc" id="L35" title="All 2 branches missed.">				e.getSource() == sc.coshb ||</span>
+<span class="nc bnc" id="L36" title="All 2 branches missed.">				e.getSource() == sc.sinb ||</span>
+<span class="nc bnc" id="L37" title="All 2 branches missed.">				e.getSource() == sc.sinhb ||</span>
+<span class="nc bnc" id="L38" title="All 2 branches missed.">				e.getSource() == sc.tanb ||</span>
+<span class="nc bnc" id="L39" title="All 2 branches missed.">				e.getSource() == sc.tanhb ||</span>
+<span class="nc bnc" id="L40" title="All 4 branches missed.">				e.getSource() == sc.cosb ) &amp;&amp; !super.endsWithDigit(g.textf.getText())) {</span>
+<span class="nc" id="L41">			currentString = ((AbstractButton) e.getSource()).getText();</span>
+<span class="nc" id="L42">			totalString += currentString;</span>
+<span class="nc" id="L43">			entries.add(currentString);</span>
+<span class="nc" id="L44">			currentString = &quot;&quot;;</span>
+<span class="nc" id="L45">			super.g.textf.setText(totalString);</span>
+<span class="nc" id="L46">			recentOperator = true;</span>
 		}
 		
-		/*if (e.getSource() == sc.cosb &amp;&amp; !this.recentOperator) {
-			currentString = ((AbstractButton) e.getSource()).getText();
-			totalString += currentString;
-		}*/
+<span class="nc" id="L49">		super.actionPerformed(e);</span>
+<span class="nc" id="L50">	}</span>
+	
+	public double equals(String total) {
 		
-<span class="nc" id="L47">		super.actionPerformed(e);</span>
-<span class="nc" id="L48">	}</span>
+<span class="nc" id="L54">		System.out.println(entries.toString());</span>
+		
+<span class="nc bnc" id="L56" title="All 2 branches missed.">		for (int i = 0; i &lt; entries.size(); i++) {</span>
+<span class="nc bnc" id="L57" title="All 2 branches missed.">			if (entries.get(i).equals(&quot;cos&quot;)){</span>
+<span class="nc" id="L58">				count = cos(Double.parseDouble(entries.get(i+1)));</span>
+<span class="nc" id="L59">				entries.set(i, &quot;&quot; + count);</span>
+<span class="nc" id="L60">				entries.remove(i+1);</span>
+				
+<span class="nc" id="L62">				totall = count;</span>
+			}
+			
+<span class="nc bnc" id="L65" title="All 2 branches missed.">			if (entries.get(i).equals(&quot;tan&quot;)){</span>
+<span class="nc" id="L66">				count = tan(Double.parseDouble(entries.get(i+1)));</span>
+<span class="nc" id="L67">				entries.set(i, &quot;&quot; + count);</span>
+<span class="nc" id="L68">				entries.remove(i+1);</span>
+				
+<span class="nc" id="L70">				totall = count;</span>
+			}
+			
+<span class="nc bnc" id="L73" title="All 2 branches missed.">			if (entries.get(i).equals(&quot;sin&quot;)){</span>
+<span class="nc" id="L74">				count = sin(Double.parseDouble(entries.get(i+1)));</span>
+<span class="nc" id="L75">				entries.set(i, &quot;&quot; + count);</span>
+<span class="nc" id="L76">				entries.remove(i+1);</span>
+				
+<span class="nc" id="L78">				totall = count;</span>
+			}
+			
+<span class="nc bnc" id="L81" title="All 2 branches missed.">			if (entries.get(i).equals(&quot;cosh&quot;)){</span>
+<span class="nc" id="L82">				count = cosh(Double.parseDouble(entries.get(i+1)));</span>
+<span class="nc" id="L83">				entries.set(i, &quot;&quot; + count);</span>
+<span class="nc" id="L84">				entries.remove(i+1);</span>
+				
+<span class="nc" id="L86">				totall = count;</span>
+			}
+			
+<span class="nc bnc" id="L89" title="All 2 branches missed.">			if (entries.get(i).equals(&quot;tanh&quot;)){</span>
+<span class="nc" id="L90">				count = tanh(Double.parseDouble(entries.get(i+1)));</span>
+<span class="nc" id="L91">				entries.set(i, &quot;&quot; + count);</span>
+<span class="nc" id="L92">				entries.remove(i+1);</span>
+				
+<span class="nc" id="L94">				totall = count;</span>
+			}
+			
+<span class="nc bnc" id="L97" title="All 2 branches missed.">			if (entries.get(i).equals(&quot;sinh&quot;)){</span>
+<span class="nc" id="L98">				count = sinh(Double.parseDouble(entries.get(i+1)));</span>
+<span class="nc" id="L99">				entries.set(i, &quot;&quot; + count);</span>
+<span class="nc" id="L100">				entries.remove(i+1);</span>
+				
+<span class="nc" id="L102">				totall = count;</span>
+			}
+			
+<span class="nc" id="L105">			System.out.println(entries.toString()  + totall);</span>
+		}
+<span class="nc" id="L107">		super.equals(total);</span>
+<span class="nc" id="L108">		return 0.0;</span>
+	}
 
 	@Override
 	public double cos(double num) {
-<span class="nc" id="L52">		double result = Math.cos(num);</span>
-<span class="nc" id="L53">		return result;</span>
+<span class="fc" id="L113">		double result = Math.cos(num);</span>
+<span class="fc" id="L114">		return result;</span>
 	}
 
 	@Override
 	public double cosh(double num) {
-<span class="nc" id="L58">		double result = Math.cosh(num);</span>
-<span class="nc" id="L59">		return result;</span>
+<span class="fc" id="L119">		double result = Math.cosh(num);</span>
+<span class="fc" id="L120">		return result;</span>
 	}
 
 	@Override
 	public double tan(double num) {
-<span class="nc" id="L64">		double result = Math.tan(num);</span>
-<span class="nc" id="L65">		return result;</span>
+<span class="fc" id="L125">		double result = Math.tan(num);</span>
+<span class="fc" id="L126">		return result;</span>
 	}
 
 	@Override
 	public double tanh(double num) {
-<span class="nc" id="L70">		double result = Math.tanh(num);</span>
-<span class="nc" id="L71">		return result;</span>
+<span class="fc" id="L131">		double result = Math.tanh(num);</span>
+<span class="fc" id="L132">		return result;</span>
 	}
 
 	@Override
 	public double sin(double num) {
-<span class="nc" id="L76">		double result = Math.sin(num);</span>
-<span class="nc" id="L77">		return result;</span>
+<span class="fc" id="L137">		double result = Math.sin(num);</span>
+<span class="fc" id="L138">		return result;</span>
 	}
 
 	@Override
 	public double sinh(double num) {
-<span class="nc" id="L82">		double result = Math.sinh(num);</span>
-<span class="nc" id="L83">		return result;</span>
+<span class="fc" id="L143">		double result = Math.sinh(num);</span>
+<span class="fc" id="L144">		return result;</span>
 	}
 
 }

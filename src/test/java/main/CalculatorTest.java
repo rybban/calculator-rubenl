@@ -7,19 +7,16 @@ import java.util.logging.*;
 
 import org.junit.*;
 
-import calculators.Calculator;
-import calculators.SciCalculator;
+import calculators.*;
 
 public class CalculatorTest {
 	SciCalculator calc = new SciCalculator();
 	private final static Logger LOGGER = Logger.getLogger("CalculatorTest");
-	ConsoleHandler consoler = new ConsoleHandler();
 	
 	Random rand = new Random();
 	double num1 = 0;
 	double num2 = 0;
 	double oracle = 0;
-	
 	
 	@Test
 	public void testAddPositive(){
@@ -29,8 +26,7 @@ public class CalculatorTest {
 				num2 = rand.nextDouble()*10;
 				oracle = num1 + num2;
 				
-				
-					assertEquals(calc.add(num1, num2), oracle, 0);
+				assertEquals(calc.add(num1, num2), oracle, 0);
 			}
 			LOGGER.info("PASS");
 		}catch(AssertionError e) {

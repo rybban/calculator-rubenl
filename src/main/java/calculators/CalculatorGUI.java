@@ -11,7 +11,11 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
-
+/**
+ * The GUI for the Calculator class.
+ * @author Ruben
+ *
+ */
 public class CalculatorGUI {
 	JFrame jf;
 	GridBagLayout gbl;
@@ -54,11 +58,12 @@ public class CalculatorGUI {
 		jf.getContentPane().setLayout(new BorderLayout());
 		
 		
-		//jf.setResizable(false);
+		
 		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		jf.setSize(398, 391);
 		jf.setLocationRelativeTo(null);
+		jf.setResizable(false);
 		
 		
 		jcp = new JPanel();
@@ -348,6 +353,7 @@ public class CalculatorGUI {
 		memorysubb.setEnabled(false);
 		clearentryb.setEnabled(false);
 		oneDivByXb.setEnabled(false);
+		percentb.setEnabled(false);
 		
 		jf.setVisible(true);
 	}

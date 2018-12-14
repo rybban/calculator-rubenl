@@ -6,6 +6,13 @@ import javax.swing.AbstractButton;
 
 import interfaces.CalculatorAdvancedOperations;
 
+/**
+ * Calculator subclass which adds trigonometric functions sine, cosine, tangent and 
+ * hyperbolic functions hyperbolic sine, hyperbolic cosine and hyperbolic tangent
+ * to the calculator.
+ * @author Ruben
+ *
+ */
 public class SciCalculator extends Calculator implements CalculatorAdvancedOperations {
 
 	SciCalculatorGUI sc;
@@ -43,7 +50,7 @@ public class SciCalculator extends Calculator implements CalculatorAdvancedOpera
 		super.actionPerformed(e);
 	}
 	
-	public double equals(String total) {
+	public void equals(String total) {
 		
 		System.out.println(entries.toString());
 		
@@ -99,7 +106,6 @@ public class SciCalculator extends Calculator implements CalculatorAdvancedOpera
 			System.out.println(entries.toString()  + totall);
 		}
 		super.equals(total);
-		return 0.0;
 	}
 
 	@Override
