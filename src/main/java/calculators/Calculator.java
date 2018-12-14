@@ -100,7 +100,7 @@ public class Calculator implements ActionListener, CalculatorBasicOperations {
 		}
 		
 		else if (e.getSource() == g.backb && !entries.isEmpty()) {
-			System.out.println(""+currentEntryNumber);
+			
 			String s = entries.get(entries.size()-1);
 			if (entries.get(entries.size()-1).length() > 1) {
 				
@@ -217,7 +217,7 @@ public class Calculator implements ActionListener, CalculatorBasicOperations {
 		g.textf.setText(totalString);
 		
 		
-		System.out.println(previousEntrySize + " " + currentEntryNumber + " " + entries.toString());
+		
 		
 		
 	
@@ -237,9 +237,6 @@ public class Calculator implements ActionListener, CalculatorBasicOperations {
 	public void equals(String total) {
 		fullStringSize = g.textf.getText().length();
 		
-		
-
-		System.out.println(entries.toString());
 		
 		for (int i = 0; i < entries.size(); i++) {
 			if (entries.get(i).equals("sqrt")){
@@ -261,7 +258,7 @@ public class Calculator implements ActionListener, CalculatorBasicOperations {
 				i--;
 				
 				totall = count;
-				System.out.println(entries.toString()  + totall);
+				
 			}
 			if (entries.get(i).equals("/")){
 				count = divide(Double.parseDouble(entries.get(i-1)), Double.parseDouble(entries.get(i+1)));
@@ -271,7 +268,7 @@ public class Calculator implements ActionListener, CalculatorBasicOperations {
 				
 				i--;
 				totall = count;
-				System.out.println(entries.toString()  + totall);
+				
 			}
 		}
 		
@@ -284,7 +281,7 @@ public class Calculator implements ActionListener, CalculatorBasicOperations {
 				entries.remove(i-1);
 				i--;
 				totall = count;
-				System.out.println(entries.toString() + totall);
+				
 			}
 			if (entries.get(i).equals("-")){
 				count = subtract(Double.parseDouble(entries.get(i-1)), Double.parseDouble(entries.get(i+1)));
@@ -294,7 +291,7 @@ public class Calculator implements ActionListener, CalculatorBasicOperations {
 				
 				i--;
 				totall = count;
-				System.out.println(entries.toString()  + totall);
+				
 			}
 		}
 		

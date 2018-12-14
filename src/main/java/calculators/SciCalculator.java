@@ -52,7 +52,7 @@ public class SciCalculator extends Calculator implements CalculatorAdvancedOpera
 	
 	public void equals(String total) {
 		
-		System.out.println(entries.toString());
+		
 		
 		for (int i = 0; i < entries.size(); i++) {
 			if (entries.get(i).equals("cos")){
@@ -103,7 +103,7 @@ public class SciCalculator extends Calculator implements CalculatorAdvancedOpera
 				totall = count;
 			}
 			
-			System.out.println(entries.toString()  + totall);
+			
 		}
 		super.equals(total);
 	}
